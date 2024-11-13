@@ -1,0 +1,11 @@
+.capture-review .review-content{
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.capture-review .review-content img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
