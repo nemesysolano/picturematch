@@ -9,9 +9,10 @@ from numpy import asarray
 import numpy as np
 import tensorflow as tf
 from deepface import DeepFace
+
 keras = tf.keras
-model_from_json = keras.models.model_from_json
-model = DeepFace.build_model("Facenet512")
+# model_from_json = keras.models.model_from_json
+# model = DeepFace.build_model("Facenet512")
 # https://sefiks.com/2018/09/03/face-recognition-with-facenet-in-keras/
 def l2_normalize(x):
     return x / np.sqrt(np.sum(np.multiply(x, x)))
@@ -68,9 +69,12 @@ if __name__ == "__main__":
     hilight_faces(id_front_picture, id_front_picture_faces)
 
     face_images = extract_face_from_image(face_picture, face_picture_file_faces)
+    print(face_images[0].shape)
+    
     plt.imshow(face_images[0])
     plt.show()
 
     id_front_images = extract_face_from_image(id_front_picture, id_front_picture_faces)
     plt.imshow(id_front_images[0])
     plt.show()
+    
